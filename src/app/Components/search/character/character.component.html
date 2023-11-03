@@ -1,0 +1,33 @@
+<div class="row d-flex justify-content-center">
+
+    <div class="character d-flex col-8 justify-content-center align-items-start">
+        <div class="card mb-3" style="max-width: 540px;">
+            <div class="row g-0">
+              <div class="col-md-6">
+                <img src="{{data.thumbnail}}" class="img-fluid rounded-start" alt="...">
+              </div>
+              <div class="col-md-6">
+                <div class="card-body">
+                  <h5 class="card-title">{{data.name}}</h5>
+                  <p class="card-text">{{data.desc}}</p>
+                </div>
+              </div>
+            </div>
+          </div>
+    </div>
+    
+    <p class="mt-5">Lista de eventos do character</p>
+    <div class=" row main-characters ml-0">
+      <div class="container-events d-flex col-lg-3 col-md-4 col-xs-12 col-sm-6 my-4" *ngFor="let event of data.events">
+        <div class="card d-flex" >
+          <img [src]="event.thumbnail" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">{{event.title}}</h5>
+            <h6 class="card-text">{{event.desc}}</h6>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+</div>
