@@ -29,8 +29,8 @@ export class SearchComponent implements OnInit {
       await this.characterService.getCharacter(this.character).pipe().subscribe(
         res=>{
           this.isLoading = false;
-          if(res.success){
-            this.dataCharacter = res.result;
+          if(res.name){
+            this.dataCharacter = res;
             this.showDetails = true;
           }else{
             this.toast.error("Tente outro Super Heroi.", "Super Heroi não encontrado!")

@@ -6,9 +6,9 @@ import {Observable} from 'rxjs'
   providedIn: 'root'
 })
 //Character/getCharacter?name=Iron%20Man
-//https://localhost:44397/Character/getCharacter?name=Iron%20Man
+//https://localhost:44344/Character?Nome=Iron%20Man
 export class CharacterService {
-  private url = 'https://localhost:44397'
+  private url = 'https://localhost:44344'
 
   constructor(
     private httpClient: HttpClient
@@ -16,6 +16,6 @@ export class CharacterService {
 
 
   getCharacter(character: string): Observable<any>{
-    return this.httpClient.get(this.url + "/Character/getCharacter?name=" + character)
+    return this.httpClient.get(this.url + "/Character?Nome=" + character)
   }
 }

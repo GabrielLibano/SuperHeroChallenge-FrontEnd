@@ -4,7 +4,7 @@
         <div class="card mb-3" style="max-width: 540px;">
             <div class="row g-0">
               <div class="col-md-6">
-                <img src="{{data.thumbnail}}" class="img-fluid rounded-start" alt="...">
+                <img src="{{data.thumbnail.path}}.{{data.thumbnail.extension}}" class="img-fluid rounded-start" alt="...">
               </div>
               <div class="col-md-6">
                 <div class="card-body">
@@ -16,11 +16,11 @@
           </div>
     </div>
     
-    <p class="mt-5">Lista de eventos do character</p>
+    <p class="mt-5">Lista de eventos do {{data.name}}</p>
     <div class=" row main-characters ml-0">
       <div class="container-events d-flex col-lg-3 col-md-4 col-xs-12 col-sm-6 my-4" *ngFor="let event of data.events">
         <div class="card d-flex" >
-          <img [src]="event.thumbnail" class="card-img-top" alt="...">
+          <img src="{{event.thumbnail.path}}.{{event.thumbnail.extension}}" class="card-img-top" alt="...">
           <div class="card-body">
             <h5 class="card-title">{{event.title}}</h5>
             <h6 class="card-text">{{event.desc}}</h6>
