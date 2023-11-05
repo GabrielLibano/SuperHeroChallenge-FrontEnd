@@ -1,27 +1,10 @@
-# VeteraTeste
+# Vetera Challenge
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.2.8.
-
-## Development server
-
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
-
-## Code scaffolding
-
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
-
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+Esse projeto foi feito para o processo seletivo da vetera. Que esse processo consistia em:
+- Desenvolver o Font End (Angular) e Back End (.NET Core), usando a API da Marvel.
+- No front end,Tem um formulario, para digitar o nome do super heroi (em ingles) e um botão para enviar.
+- Caso o input esteja vazio, aparece um Toast Warning pedindo para vc preencher o campo.
+- Quando o usuario clicar no botão enviar faç uma requisição para o meu backend.
+- Para o usuario não fazer mais requisições coloquei um Loading na tela para evitar esse problema.
+- Caso a requisição for um sucesso, ele me retorna o personagem que vc digitou (Foto, nome e descrição) e também a lista de eventos daquele personagem (Foto, titulo e descrição).
+- Caso a requisição for um BadRequest retorno um Toast Error.
